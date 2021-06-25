@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Git</title>
+	<style>
+	 div{
+	 	border: 2px solid red;
+		padding: 15px 15px;
+	 }
+		.btn3{
+			padding: 15px;
+			color: #fff;
+			border: none;
+		}
+		.btn-1{
+			background: #ff4500;
+		}
+		.btn-2{
+			background: #ca9911;
+		}
+		.btn-3{
+			background: #0a90a1;
+		}
+		pre{
+			margin: 0;
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<h1><strong>1.Introduction to Git</strong></h1>
+
+	<h1>What is Git?</h1>
+
+	<p>Git is a distributed version control system (DVSC)<p>
+	<ul>
+		<li>
+			Each user has a local copy of the complete histoey of the project, which is known as a repository.
+		</li>
+		<li>
+			User can work offline.
+		</li>
+		<li>
+			Can easily synchronize repositories.
+		</li>
+		<li>
+			Use github, gitLab, bitbucket accounts.
+		</li>
+	</ul>
+	<h1>Git</h1>
+	<p>
+		Git is a free and opean source software project meaning that the code that implements Git is punlicly available. No single company own Git, and anyone can make contribution to improve it.
+	</p>
+</div>
+
+<br>
+
+<div>
+	<h1><strong>2.How to Install Git</strong></h1>
+
+  <h1>Hello Git</h1>
+
+	<p>install the Git command line interface(Git is Git Bash).</p>
+	<ol>
+			<li>
+				Verify your Git Version.
+			</li>
+			<li>
+				Explore Git Help.
+			</li>
+			<li>
+				Configure your user name, email addresss and default Git editor.
+			</li>
+			<li>
+				Then we will see important commands, that we use a most <strong>like : add, commit, log status, push, pull, flags etc.</strong>.
+			</li>
+		</ol>
+
+			<p>Git Bash/ CMD : git --version<br>
+				git version 2.32.0.windows.1</p>
+
+			<p>Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$  git --version<br>
+				git version 2.32.0.windows.1<br>
+			</p>
+			<p>Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$  git --help<br>
+				Some other commands<br>
+			</p>
+	</div>
+
+<br>
+
+	<div>
+		<h1><strong>3.What is Git init | set Git UserName | Git UserEmail</strong></h1>
+
+		<p>
+			Emmitt@Home-PC MINGW64 ~<br>
+			$ cd d:<br>
+			//change dir
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 ~/d<br>
+			$ mkdir ABgit<br>
+			//makedir
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 ~/d<br>
+			$ cd ABgit<br>
+			//change dir
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 ~/d/ABgit<br>
+			$ git status<br>
+			//check status of git repository or not/ git init or not
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 ~/d/ABgit<br>
+			$ git init<br>
+			Initalized empty Git repository is d:/ABgit/.git/
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git status<br>
+			On branch master<br>
+			nothing to commit, working tree clean
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config --global user.name "amit"
+			//set global name /ABgit folder
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config --global user.name<br>
+			amit
+		</p>
+
+  	<!--  -->
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ clear<br>
+			//whole page is clear
+		</p>
+		<!--  -->
+
+		<!--  -->
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config user.name "amit"<br>
+			//set local name /ABgit folder
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config user.name<br>
+			amit
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config --global user.name "amit bourai"<br>
+			//set globle name /ABgit folder
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config --global user.name<br>
+			amit bourai
+		</p>
+		<!--  -->
+
+		<!---->
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config user.email "amitbourai.ab@gmail.com"<br>
+			//set local email /ABgit folder
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config user.email<br>
+			amitbourai.ab@gmail.com
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config --global user.email "amit1bourai@gmail.com"<br>
+			//set globle email /ABgit folder,if we could't set local then global is shown
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git config --global user.email<br>
+			amit1bourai@gmail.com
+		</p>
+		<!---->
+	</div>
+
+<br>
+
+	<div>
+		<h1><strong>4.Git Workflow | Working Tree | Git Add | Git Commit | Git Log</strong></h1>
+
+		<button class="btn3 btn-1">Working Director<br>
+		(You made a dir as git dir and do some work)</button>
+		<br>
+		|<br>
+		git add
+		<br>
+		|<br>
+		<button class="btn3 btn-2">Staging Area<br>
+		(in a file we made changes and (git add) it,<br> Staging Area is area from where git tracking our files)</button>
+		<br>
+		|<br>
+		git commit
+		<br>
+		|<br>
+		<button class="btn3 btn-3">Repository<br>
+		(if a file is added if we make changes, to know changes are what<br> we should (git commit) the file, it return id no. for tracking file)</button>
+		<p>then after (git commit) if we git push file it goes to online remote</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ touch index.html<br>
+			//this command create file
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ notepad index.html<br>
+			//by this we write by git bash VINOD...
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+			$ git status
+			<pre>
+			On branch master
+			Your branch is ahead of 'origin/master' by 1 commit.
+			  (use "git push" to publish your local commits)
+
+			Untracked files:
+			  (use "git add <file>..." to include in what will be committed)
+			        text.txt
+
+			nothing added to commit but untracked files present (use "git add" to track)
+			</pre>
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ git add index.html<br>
+			//by this we adding index.html single files
+		</p>
+
+		<p>
+				Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$ git status
+				<pre>
+				On branch master
+				Your branch is ahead of 'origin/master' by 1 commit.
+				  (use "git push" to publish your local commits)
+
+				Changes to be committed:
+				  (use "git restore --staged <file>..." to unstage)
+				        new file:   text.txt
+				</pre>
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+			$ notepad index.html<br>
+			//by this we write by git bash VINOD THAPA... WE CHANGE
+		</p>
+
+		<p>
+			Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+			$ git status
+			<pre>
+			On branch master
+			Your branch is ahead of 'origin/master' by 1 commit.
+			  (use "git push" to publish your local commits)
+
+			Changes to be committed:
+			  (use "git restore --staged <file>..." to unstage)
+			        new file:   text.txt
+
+			Changes not staged for commit:
+			  (use "git add <file>..." to update what will be committed)
+			  (use "git restore <file>..." to discard changes in working directory)
+			        modified:   text.txt
+			</pre>
+			</p>
+
+			<p>
+				Emmitt@Home-PC MINGW64 /d/ABgit (master)<br>
+				$ git add .<br>
+				//by this we adding multiple files
+			</p>
+
+			<p>
+				Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$ git status
+				<pre>
+				On branch master
+				Your branch is ahead of 'origin/master' by 1 commit.
+				  (use "git push" to publish your local commits)
+
+				Changes to be committed:
+				  (use "git restore --staged <file>..." to unstage)
+				        new file:   text.txt
+				</pre>
+			</p>
+
+			<p>
+				Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$ git commit -m 'first commit, one file added'
+				<pre>
+				[master 91c886e] first commit, one file added
+				 1 file changed, 1 insertion(+)
+				 create mode 100644 text.txt
+				</pre>
+			</p>
+
+			<p>
+				Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$ git status
+				<pre>
+				On branch master
+				Your branch is ahead of 'origin/master' by 2 commits.
+				  (use "git push" to publish your local commits)
+
+				nothing to commit, working tree clean
+				</pre>
+			</p>
+
+			<p>
+				Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$ git log
+				<br>//it return full details, id, etc.
+				<pre>
+				commit 91c886e6b4c227ece6887d143212b0307c92cc35 (HEAD -> master)
+				Author: amit <amit1bourai@gmail.com>
+				Date:   Thu Jun 10 12:29:25 2021 +0530
+
+				    first commit, one file added
+				</pre>
+			</p>
+
+			<p>
+				Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$ git log --oneline
+				<br>//it return condence version, id, HEAD, commit message. <pre>
+					91c886e (HEAD -> master) first commit, one file added
+				</pre>
+			</p>
+
+			<p>
+				Emmitt@Home-PC MINGW64 /d/amitgit (master)<br>
+				$ git log --oneline -3
+				<br>//it return last -3 ids.
+				<pre>
+				91c886e (HEAD -> master) first commit, one file added
+				3007dcf (origin/localthapa, localthapa) task done by localthapa
+				6cd84b4 (origin/master) new line added
+				</pre>
+			</p>
+	</div>
+
+<br>
+
+	<div>
+		<h1><strong>5.Create Account in Github and Gitlab</strong></h1>
+
+		<h1>GITGUB</h1>
+		<ul>
+			<li>GitHub is a code hosting platform for version control and collaboration. It lets you and others work togetther on project from anywhere.</li>
+		</ul>
+	</div>
+
+<br>
+
+<div>
+	<h1><strong>6.Git and GitLab GitHub</strong></h1>
+
+	<p>
+		Emmitt@Home-PC MINGW64 ~<br>
+		$ cd d:
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d<br>
+		$ mkdir newyoutubegit
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d<br>
+		$ dir<br>
+		show all the directory
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d<br>
+		$ clear<br>
+		//whole page is clear
+	</p>
+
+	<P>
+		Emmitt@Home-PC MINGW64 /d<br>
+		$ cd newyoutubegit
+	</P>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit<br>
+		$ dir
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit<br>
+		$ touch index.html
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit<br>
+		$ dir<br>
+		index.html
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit<br>
+		$ notepad index.html<br>
+		//vinod bhadur thapa<br>
+		//alisa thapatechnical
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit<br>
+		$ cat index.html<br>
+		vinod bhadur thapa<br>
+		alisa thapatechnical
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit<br>
+		$ git status<br>
+		fatal: not a git repository (or any of the parent directories): .git
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d<br>
+		$ clear<br>
+		//whole page is clear
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit<br>
+		$ git init<br>
+		Initialized empty Git repository in D:/newyoutubegit/.git/
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git status<br>
+		<pre>
+		On branch master
+
+		No commits yet
+
+		Untracked files:
+		  (use "git add <file>..." to include in what will be committed)
+		        index.html
+
+		nothing added to commit but untracked files present (use "git add" to track)
+	</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git add .<br>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git status<br>
+		<pre>
+			On branch master
+
+			No commits yet
+
+			Changes to be committed:
+			  (use "git rm --cached <file>..." to unstage)
+			        new file:   index.html
+
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git commit -m 'first commit index file added'<br>
+    <pre>
+		[master (root-commit) a75a0df] first commit index file added
+		 1 file changed, 2 insertions(+)
+		 create mode 100644 index.html
+	 </pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git log<br>
+		<pre>
+		commit a75a0dfe73d1a08503e6de212a6272c00f3305cd (HEAD -> master)
+		Author: amit <amit1bourai@gmail.com>
+		Date:   Thu Jun 10 18:26:13 2021 +0530
+
+		    first commit index file added
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git log --oneline<br>
+		a75a0df (HEAD -> master) first commit index file added
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git log --oneline -3<br>
+		a75a0df (HEAD -> master) first commit index file added
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git status<br>
+		<pre>
+		On branch master
+		nothing to commit, working tree clean
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git remote add origin https://gitlab.com/amit-bourai/demoyoutube.git<br>
+		//origin = alisa name for https://gitlab.com/amit-bourai/demoyoutube.git
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git remote<br>
+		origin
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git remote -v<br>
+		<pre>
+		origin  https://gitlab.com/amit-bourai/demoyoutube.git (fetch)
+		origin  https://gitlab.com/amit-bourai/demoyoutube.git (push)
+	  </pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master<br>
+		$ git push -u origin master<br>
+		//means creating (-u) track between local to online repository
+		<pre>
+			Enumerating objects: 3, done.
+			Counting objects: 100% (3/3), done.
+			Writing objects: 100% (3/3), 251 bytes | 14.00 KiB/s, done.
+			Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+			To https://gitlab.com/amit-bourai/demoyoutube.git
+			* [new branch]      master -> master
+			Branch 'master' set up to track remote branch 'master' from 'origin'.
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ notepad index.html<br>
+		dchange file
+		<pre>
+			vinod bhadur thapa
+			alisa thapatechnical
+			Hope Apko sajma hoga :)
+		</pre>]
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git status<br>
+		<pre>
+		On branch master
+		Your branch is up to date with 'origin/master'.
+
+		Changes not staged for commit:
+		  (use "git add <file>..." to update what will be committed)
+		  (use "git restore <file>..." to discard changes in working directory)
+		        modified:   index.html
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git add .
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git commit -m 'new line added'<br>
+		<pre>
+		[master 2963514] new line added
+		 1 file changed, 2 insertions(+), 1 deletion(-)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git status<br>
+		<pre>
+		On branch master
+		Your branch is ahead of 'origin/master' by 1 commit.
+		  (use "git push" to publish your local commits)
+
+		nothing to commit, working tree clean
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git log --oneline<br>
+		<pre>
+		2963514 (HEAD -> master) new line added
+		a75a0df (origin/master) first commit index file added
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git push -u origin master<br>
+		<pre>
+		Enumerating objects: 5, done.
+		Counting objects: 100% (5/5), done.
+		Delta compression using up to 4 threads
+		Compressing objects: 100% (2/2), done.
+		Writing objects: 100% (3/3), 296 bytes | 59.00 KiB/s, done.
+		Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+		To https:dgitlab.com/amit-bourai/demoyoutube.git
+		   a75a0df..2963514  master -> master
+		Branch 'master' set up to track remote branch 'master' from 'origin'.
+		</pre>
+	</p>
+</div>
+
+<br>
+
+<div>
+	<h1><strong>7.Create Git Local Branch, Checkout Branch & Merge Branch in Git</strong></h1>
+
+	<h1>Branch in Git</h1>
+	<p>A branch will allow to make a "copy" of it, while not effecting orignal branch.</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 ~<br>
+		$ cd d:
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d<br>
+		$ cd newyoutubegit
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git branch<br>
+		* master
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ dir<br>
+		index.html
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ cat index.html<br>
+		<pre>
+		vinod bhadur thapa
+		alisa thapatechnical
+		Hope Apko sajma hoga :)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git branch localthapa<br>
+		dbranch name will be any thing..
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git branch<br>
+		<pre>
+		  localthapa
+		* master
+		</pre>
+	</p>
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git checkout localthapa<br>
+		Switched to branch 'localthapa'
+	</p>
+
+	<p>
+		
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ dir<br>
+		index.html
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ cat index.html<br>
+		<pre>
+		vinod bhadur thapa
+		alisa thapatechnical
+		Hope Apko sajma hoga :)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ notepad index.html<br>
+		<pre>
+		vinod bhadur thapa
+		alisa thapatechnical
+		task is done by localthapa :)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ cat index.html<br>
+		<pre>
+		vinod bhadur thapa
+		alisa thapatechnical
+		task is done by localthapa :)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ git add .<br>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ git commit -m 'task done by localthapa'<br>
+		<pre>
+		[localthapa 0051293] task done by localthapa
+		 1 file changed, 2 insertions(+), 1 deletion(-)
+		</pre>
+	</p>	
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ git push -u origin localthapa<br>
+		<pre>
+			Enumerating objects: 5, done.
+			Counting objects: 100% (5/5), done.
+			Delta compression using up to 4 threads
+			Compressing objects: 100% (2/2), done.
+			Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+			Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+			remote:
+			remote: To create a merge request for localthapa, visit:
+			remote:   https:dgitlab.com/amit-bourai/demoyoutube/-/merge_requests/new?merge_request%5Bsource_branch%5D=localthapa
+			remote:
+			To https:dgitlab.com/amit-bourai/demoyoutube.git
+			 * [new branch]      localthapa -> localthapa
+			Branch 'localthapa' set up to track remote branch 'localthapa' from 'origin'.
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (localthapa)<br>
+		$ git checkout master<br>
+		<pre>
+		Switched to branch 'master'
+		Your branch is up to date with 'origin/master'.
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ cat index.html<br>
+		<pre>
+		vinod bhadur thapa
+		alisa thapatechnical
+		Hope Apko sajma hoga :)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git merge localthapa<br>
+		<pre>
+		Updating 2963514..0051293
+		Fast-forward
+		 index.html | 3 ++-
+		 1 file changed, 2 insertions(+), 1 deletion(-)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ cat index.html<br>
+		<pre>
+		vinod bhadur thapa
+		alisa thapatechnical
+		task is done by localthapa :)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git push -u origin master<br>
+		<pre>
+		Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+		To https:dgitlab.com/amit-bourai/demoyoutube.git
+		   2963514..0051293  master -> master
+		Branch 'master' set up to track remote branch 'master' from 'origin'.
+		</pre>
+	</p>
+</div>
+
+<br>
+
+<div>
+	<h1><strong>8.What is Clone in Git</strong></h1>
+
+	<h1>What is git clone?</h1>
+	<p>git clone is used to create a local copy of a remote repository.</p>
+
+	<h1>When to use?</h1>
+	<p>No local repository is there</p>
+
+	<p>
+		<strong>git clone</strong> : when we create a /dir dosen't make him a git repository, & want to use online project, so than use  git clone.
+	</p>
+
+	<p>
+		when local repository already not available so use "git clone" to any project, so it comes in our /dir then dosen't need to make him git repository.
+	</p>
+
+	<p>
+		we has a local repo /dir we initlized git use <strong>remote add</strong> / <strong>clone</strong>.
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 ~<br>
+		$ cd d:
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d<br>
+		$ mkdir newclonegit
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newclonegit<br>
+		$ git status<br>
+		<pre>
+		fatal: not a git repository (or any of the parent directories): .git
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newclonegit<br>
+		$ git clone https://gitlab.com/amit-bourai/demoyoutube.git<br>
+		//copy HTTPS clone url from gitlab
+		<pre>
+		Cloning into 'demoyoutube'...
+		remote: Enumerating objects: 9, done.
+		remote: Counting objects: 100% (9/9), done.
+		remote: Compressing objects: 100% (5/5), done.
+		remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+		Receiving objects: 100% (9/9), done.
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newclonegit<br>
+		$ cd demoyoutube
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newclonegit/demoyoutube (master)<br>
+		$ git status<br>
+		<pre>
+		On branch master
+		Your branch is up to date with 'origin/master'.
+
+		nothing to commit, working tree clean
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newclonegit/demoyoutube (master)<br>
+		$ git log --oneline<br>
+		<pre>
+		0051293 (HEAD -> master, origin/master, origin/localthapa, origin/HEAD) task done by localthapa
+		2963514 new line added
+		a75a0df first commit index file added
+		</pre>
+	</p>
+</div>
+
+<br>
+
+<div>
+	<h1><strong>9.Git ignore in Git did not work</strong></h1>
+
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ dir<br>
+		//list of all the existing files.<br>
+		index.html  secrets.txt
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ ls -a<br>
+		//list of all the existing / hidden files.<br>
+		./  ../  .git/  index.html  secrets.txt
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ touch .gitignore
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ ls -a<br>
+		./  ../  .git/  .gitignore  index.html  secrets.txt
+	</p>
+
+	<p>
+		// we can simply opean file  write "secrets.txt" in .gitignor file ctrl+s.
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git status<br>
+		<pre>
+		On branch master
+		Your branch is up to date with 'origin/master'.
+
+		Changes not staged for commit:
+		  (use "git add <file>..." to update what will be committed)
+		  (use "git restore <file>..." to discard changes in working directory)
+		        modified:   .gitignore
+
+		no changes added to commit (use "git add" and/or "git commit -a")
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git add .gitignore<br>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git commit -m 'gitignore addeds'<br>
+		<pre>
+		[master 6393b62] gitignore addeds
+		 1 file changed, 1 insertion(+), 1 deletion(-)
+		</pre>
+	</p>
+
+	<p>
+		Emmitt@Home-PC MINGW64 /d/newyoutubegit (master)<br>
+		$ git push<br>
+		<pre>
+		Enumerating objects: 4, done.
+		Counting objects: 100% (4/4), done.
+		Delta compression using up to 4 threads
+		Compressing objects: 100% (2/2), done.
+		Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+		Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+		To https://gitlab.com/amit-bourai/demoyoutube.git
+		   01a4087..6393b62  master -> master
+		</pre>
+	</p>
+
+
+</div>
+
+
+
+</body>
+</html>
